@@ -21,3 +21,5 @@ A multiple connect TCP/ IP Server.
                  - OFF by default.
 
 Also TCP/IP Client.
+gcc -std=c99 tm_client.c -o client
+./client 127.0.0.1 4549  <or> ./client <HOSTNAME> <Port>
