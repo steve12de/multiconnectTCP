@@ -22,4 +22,23 @@ A multiple connect TCP/ IP Server.
 
 Also TCP/IP Client.
 gcc -std=c99 tm_client.c -o client
-./client 127.0.0.1 4549  <or> ./client <HOSTNAME> <Port>
+./client 127.0.0.1 4549  <or> ./client <HOSTNAME> <Port>.
+
+To Install openSSL under Ubuntu and BUILD the server using eclipse
+http://www.openssl.org
+https://help.ubuntu.com/community/OpenSSL
+$sudo apt-get install openssl
+$apt-cache search libssl | grep SSL  #to see version to install, in this case 0.9.8
+$apt-get install libssl0.9.8
+$apt-get install libssl-dev
+  CONFIRM following sym Links in /usr/lib/ssl
+          openssl.conf -> /etc/ssl/openssl.cnf
+          certs -> /etc/ssl/certs
+          private -> /etc/ssl/private
+  CONFIRM /usr/include/openssl/<headers and importantly ssl.h>.
+  SET UP ECLIPSE:
+  In Eclipse IDE select Your Project property --> c/c++ Build --> 
+		Settings gcc c linker(from tools settings)--> add to Library Search Path (-L)
+		Libraries -> add Path(-L) /usr/lib /usr/lib/i386-linux-gnu
+                -> add libs -> ssl and crypto
+Now Build it.
