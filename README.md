@@ -1,5 +1,5 @@
 # multiconnectTCP
-Multi Connection TCP/IP Server(with openSSL) and TCP/IP Client
+Steve's Multi Connection TCP/IP Server(with openSSL) and TCP/IP Client
 
 A multiple connect TCP/ IP Server.
    The socket Listner backlog supports up to 64 TCP/IP connections. Each client connection 
